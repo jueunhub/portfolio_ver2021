@@ -1,0 +1,214 @@
+/*WORKS 페이지 - 공통*/
+#works{padding:4% 5% 0;}
+#works h1{font-size:2rem;font-weight:600;margin-bottom:2.5%;}
+#works h2{position:relative;font-size:1.125rem;padding-left:10px;margin-bottom:10px}
+#works h2::before{content:"";display:block;position:absolute;top:-4px;left:0;width:20px;height:20px;border-radius:10px;background:#f4df4d;z-index:-1;}
+#works .txt{padding-left:10px;color:#444;}
+#works .common ul{margin:30px auto 150px;display:flex;flex-wrap:wrap;}
+#works .common ul li{position:relative;width:33.33%;box-sizing:border-box;padding:3% 4%;border:1px solid #f1f1f1;text-align:center;}
+#works .common ul li::before{content:"";display:block;width:0;height:100%;background:#f4df4d;transition:.6s ease-out;position:absolute;top:0;left:0;z-index:-1;}
+#works .common ul li:nth-child(2),
+#works .common ul li:nth-child(3),
+#works .common ul li:nth-child(5),
+#works .common ul li:nth-child(6){border-left:0;}
+#works .common ul li:nth-child(4),
+#works .common ul li:nth-child(5),
+#works .common ul li:nth-child(6){border-top:0;}
+#works .common ul li img{width:100%;height:auto;}
+#works .common ul li .name{font-size:1.125em;font-weight:600;margin-top:30px;}
+#works .common ul li .descript{margin-top:20px;color:#777;font-size:.9rem;}
+#works .common ul li .button{margin-top:30px;}
+#works .common ul li .button a{display:inline-block;padding:7px 23px 6px;border:2px solid #f4df4d;transition:.5s;min-width:56px;font-size:.9rem;border-radius:20px;margin:0 5px;background:#fff;box-sizing:border-box;}
+#works .common ul li:hover::before{width:100%;}
+#works .common ul li:hover .button a{border-color:#fff;}
+#works .common ul li .button a:hover{background:#111;color:#fff;border-color:#111;}
+
+/*WORKS 페이지 - 부분 커스텀*/
+#works .custom .swiper-container{margin:30px auto 80px;}
+#works .custom ul li{transition:.5s;position:relative;font-size:0;overflow:hidden;cursor:pointer;}
+#works .custom ul li img{width:100%;transition:.5s}
+#works .custom ul li .textWrap{position:absolute;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.5);}
+#works .custom ul li .textWrap > div{position:absolute;width:100%;text-align:center;top:50%;transform:translateY(-50%);}
+#works .custom ul li .textWrap p{color:#fff;line-height:1.2em}
+#works .custom ul li .textWrap .tag{font-size:1rem;font-weight:200;}
+#works .custom ul li .textWrap .name{font-size:1.8rem;}
+#works .custom ul li:hover img{transform:scale(1.1);}
+
+/*개인스킨&맞춤제작&일부 커스텀 페이지 - 공통*/
+.skin section{padding:0 5%;}
+.skin .top_bnn{padding:0;width:100%;background:no-repeat left top fixed;background-size:100% auto;}
+.skin .top_bnn img{display:none;width:100%;height:auto;}
+.skin .skin_info,
+.skin .skin_view{max-width:1200px;margin:0 auto;}
+.skin .skin_info h1{font-size:2rem;font-weight:600;margin:60px 0 15px;}
+.skin .skin_info ul{margin-bottom:10px;}
+.skin .skin_info ul li{cursor:default;display:inline-block;border:2px solid #ccc;color:#999;border-radius:20px;padding:5px 20px;margin:0 10px 15px 0;}
+.skin .skin_info ul li:last-child{margin-right:0;}
+.skin .skin_info p{color:#555;margin-bottom:8%;}
+.skin .skin_info p span{color:#111}
+.skin .skin_view{margin-bottom:30px;}
+.skin .skin_view .swiper-container ul li,
+.skin .skin_view .contWrap ul li{font-size:0}
+.skin .skin_view .swiper-container ul li p,
+.skin .skin_view .contWrap ul li p{display:inline-block;vertical-align:top;}
+.skin .skin_view .swiper-container ul li p img,
+.skin .skin_view .contWrap ul li p img{width:100%;height:auto;}
+.skin .skin_view .swiper-container ul li .pc,
+.skin .skin_view .contWrap ul li .pc{width:65%;}
+.skin .skin_view .swiper-container ul li .mobile,
+.skin .skin_view .contWrap ul li .mobile{width:25%;margin-left:10%;}
+.skin .skin_view .btnWrap{margin-bottom:30px;overflow:hidden;}
+.skin .skin_view .tit_btn{float:left;}
+.skin .skin_view .tit_btn a,
+.skin .skin_view .btnWrap .titWrap li a{color:#ccc;font-size:1.5rem;font-weight:600;margin-right:35px;cursor:pointer;}
+.skin .skin_view .tit_btn a.on,
+.skin .skin_view .btnWrap .titWrap li.on a{color:#f4df4d;}
+.skin .skin_view .link_btn{float:right;}
+.skin .skin_view .link_btn a{display:inline-block;font-size:1.1rem;vertical-align:middle;transition:.3s;}
+.skin .skin_view .link_btn a i{font-size:1.2rem;vertical-align:middle;margin-left:5px;}
+.skin .skin_view .link_btn a:hover{color:#f4df4d;}
+
+/*맞춤제작 페이지 - 공통*/
+.skin .skin_info .titWrap{margin-top:70px;}
+.skin .skin_info .titWrap p{margin-bottom:-5px;font-size:1.1rem;}
+.skin .skin_info .titWrap h1{margin:0 0 15px;}
+
+/*일부커스텀 페이지 - 공통*/
+.skin .skin_view .btnWrap .titWrap li{display:inline-block;}
+.skin .skin_view .btnWrap .titWrap{float:left;}
+.skin .skin_view .substWrap ul{font-size:0;}
+.skin .skin_view .substWrap ul li div{position:relative;}
+.skin .skin_view .substWrap ul li{display:inline-block;vertical-align:top;}
+.skin .skin_view .substWrap ul li div p{width:100%;height:100%;position:absolute;top:0;left:0;background:#f4df4d;opacity:0;transition:.8s;}
+.skin .skin_view .substWrap ul li div p span{width:100%;position:absolute;top:0;left:0;font-size:1.5rem;font-weight:600;color:#fff;word-break:break-all;padding:20px;box-sizing:border-box;}
+.skin .skin_view .substWrap ul li img{width:100%;height:auto;}
+.skin .skin_view .substWrap .cont2{display:none;}
+.skin .skin_view .substWrap .pc li{width:50%;}
+.skin .skin_view .substWrap .mobile li{width:33.33%;}
+.skin .skin_view .substWrap .one_page li:first-child{width:65%;}
+.skin .skin_view .substWrap .one_page li:last-child{width:35%;}
+.skin .skin_view .substWrap ul li div:hover p{opacity:.95;}
+
+/*개인스킨 페이지 - AW0501*/
+.aw0501 .top_bnn{background-image:url('../images/aw0501_top.jpg');}
+
+/*개인스킨 페이지 - AW0502*/
+.aw0502 .top_bnn{background-image:url('../images/aw0502_top.jpg');}
+
+/*개인스킨 페이지 - N501*/
+.n501 .top_bnn{background-image:url('../images/n501_top.jpg');}
+
+/*맞춤제작 페이지 - 에트몽*/
+.etmon .top_bnn{background-image:url('../images/etmon_top.jpg');}
+
+/*맞춤제작 페이지 - 문트*/
+.moont .top_bnn{background-image:url('../images/moont_top.jpg');}
+
+/*맞춤제작 페이지 - 따박컴퍼니*/
+.ddapark .top_bnn{background-image:url('../images/ddapark_top.jpg');}
+
+/*맞춤제작 페이지 - 비너티*/
+.vinnerty .top_bnn{background-image:url('../images/vinnerty_top.jpg');}
+
+/*맞춤제작 페이지 - 아르푸가구*/
+.arfu .top_bnn{background-image:url('../images/arfu_top.jpg');}
+
+/*맞춤제작 페이지 - 핸드메이드오*/
+.handmadeo .top_bnn{background-image:url('../images/handmadeo_top.jpg');}
+.skin.handmadeo .skin_view .swiper-container ul li p{margin:0 2%;width:29.33%;}
+
+
+/*일부커스텀 페이지 - 미미박스*/
+.mimibox .top_bnn{background-image:url('../images/mimibox_top.jpg');}
+
+/*일부커스텀 페이지 - 렌느*/
+.reine .top_bnn{background-image:url('../images/reine_top.jpg');}
+
+/*일부커스텀 페이지 - 큐라에스*/
+.curas .top_bnn{background-image:url('../images/curas_top.jpg');}
+
+/*일부커스텀 페이지 - 에이브로*/
+.abro .top_bnn{background-image:url('../images/abro_top.jpg');}
+
+/*일부커스텀 페이지 - 에이브로*/
+.manslabel .top_bnn{background-image:url('../images/manslabel_top.jpg');}
+
+
+/*태블릿 반응형 CSS*/
+@media (max-width:1024px){
+    /*WORKS 페이지*/
+    #works .common ul li{padding:3%;}
+}
+
+/*모바일 반응형 CSS*/
+@media (max-width:680px){
+    /*WORKS 페이지*/
+    #works h1{margin-bottom:10%;}
+    #works .common ul{margin-bottom:100px;}
+    #works .common ul li{width:100%;border-bottom:0;padding:5%;}
+    #works .common ul li:nth-child(2), 
+    #works .common ul li:nth-child(3), 
+    #works .common ul li:nth-child(5), 
+    #works .common ul li:nth-child(6){border:1px solid #f1f1f1;}
+    #works .common ul li:nth-child(6){border-bottom:1px solid #f1f1f1;}
+
+    /*작업물 개별 페이지(공통)*/
+    .skin .skin_info h1{font-size:1.7rem;margin-top:40px;}
+    .skin .skin_info ul li{padding:6px 12px 4px;margin:0 3px 7px 0;}
+    .skin .skin_info p{margin-bottom:20%;}
+    .skin .skin_view .btnWrap{margin-bottom:10px;}
+    .skin .skin_view .tit_btn{float:none;text-align:center;}
+    .skin .skin_view .link_btn{float:none;text-align:right;margin-top:20px;}
+    .skin .skin_view .tit_btn a, 
+    .skin .skin_view .btnWrap .titWrap li a{margin:0 15px;}
+    .skin .skin_view .swiper-container ul li,
+    .skin .skin_view .contWrap ul li{text-align:center;}
+    .skin .skin_view .swiper-container ul li .pc, 
+    .skin .skin_view .contWrap ul li .pc{width:100%;}
+    .skin .skin_view .swiper-container ul li .mobile,
+    .skin .skin_view .contWrap ul li .mobile{width:90%;margin-top:10%;margin-left:0;}
+
+    /*맞춤제작 개별 페이지*/
+    .skin .skin_info .titWrap{margin-top:40px;}
+    .skin.handmadeo .skin_view .swiper-container ul li p{width:90%;margin-top:10%;}
+    .skin.handmadeo .skin_view .swiper-container ul li p:first-child{margin-top:0;}
+
+    /*부분 커스텀 개별 페이지*/
+    .skin .skin_view .btnWrap .titWrap{float:none;text-align:center;}
+    .skin .skin_view .substWrap .pc li,
+    .skin .skin_view .substWrap .mobile li{width:100%;}
+    .skin .skin_view .substWrap .one_page li:first-child,
+    .skin .skin_view .substWrap .one_page li:last-child{width:100%;}
+
+}
+
+/*모바일 반응형 CSS*/
+@media (max-width:360px){
+    /*WORKS 페이지*/
+    #works h1{font-size:1.5rem;}
+    #works h2{font-size:.95rem;}
+    #works .txt{font-size:.82rem;}
+    #works .common ul{margin:25px auto 90px;}
+    #works .common ul li .name{font-size:.95rem;}
+    #works .common ul li .descript{font-size:.85rem;}
+    #works .common ul li .button a{padding-bottom:4px;font-size:.8rem;}
+    #works .custom .swiper-container{margin-top:25px;}
+    #works .custom ul li .textWrap p{line-height:1.5rem;}
+    #works .custom ul li .textWrap .tag{font-size:.9rem;}
+    #works .custom ul li .textWrap .name{font-size:1.6rem;}
+
+    /*작업물 개별 페이지(공통)*/
+    .skin .skin_info h1{font-size:1.3rem;}
+    .skin .skin_info ul li{padding:5px 10px 2px;font-size:.8rem;margin-right:1px;}
+    .skin .skin_info p{font-size:.87rem;}
+    .skin .skin_view .tit_btn a, 
+    .skin .skin_view .btnWrap .titWrap li a{font-size:1.2rem;margin:0 10px;}
+    .skin .skin_view .link_btn a{font-size:.9rem;}
+    .skin .skin_view .link_btn a i{font-size:1.1rem;}
+
+    /*맞춤제작 페이지*/
+    .skin .skin_info .titWrap p{font-size:.9rem;}
+
+    /*부분 커스텀 페이지*/
+    .skin .skin_view .substWrap ul li div p span{font-size:1.2rem;}
+}

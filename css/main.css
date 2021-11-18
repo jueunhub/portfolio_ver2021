@@ -1,0 +1,198 @@
+/*메인헤더*/
+.mainHeader{position:fixed;width:100%;z-index:100;text-align:right;}
+.mainHeader #menu{padding:20px 0;margin-right:17px;}
+.mainHeader #menu li{display:inline-block;padding:3px 11px 1px;position:relative;border-radius:20px;transition:.7s;}
+.mainHeader #menu li a{transition:.5s;font-size:.82rem;}
+.mainHeader #menu li.active,
+.mainHeader #menu li:hover{background:#f4df4d;}
+.mainHeader #menu li.active a{font-weight:600;}
+.fp-viewing-firstPage .mainHeader #menu li.active,
+.fp-viewing-firstPage .mainHeader #menu li:hover{background:#fff;}
+
+/*공통*/
+#fullpage section{position:relative;box-sizing:border-box;}
+
+/*첫번째 섹션*/
+#fullpage .intro{background:#f4df4d;}
+#fullpage .intro .textWrap{position:absolute;top:50%;transform:translateY(-50%);width:100%;padding:0 5%;box-sizing:border-box;}
+#fullpage .intro p{font-size:2rem;font-weight:200;line-height:1.8em;}
+#fullpage .intro .textWrap p{opacity:0}
+#fullpage .intro p.up1{animation:textUp 2s;animation-fill-mode: forwards;}
+#fullpage .intro p.up2{animation:textUp 2s 1s;animation-fill-mode: forwards;}
+#fullpage .intro p.up3{animation:textUp 2s 2s;animation-fill-mode: forwards;}
+#fullpage .intro p strong{font-weight:600;}
+#fullpage .intro p .name{font-family:'Cafe24Shiningstar';font-size:2.7rem;font-weight:400;}
+#fullpage .intro .scroll{position:absolute;bottom:20px;left:50%;transform:translateX(-50%);text-align:center;font-size:0}
+#fullpage .intro .scroll i{font-size:2rem;animation:scrollMotion 2s linear infinite;}
+#fullpage .intro .scroll span{display:block;font-family:'Cafe24Shiningstar';font-size:1.7rem;}
+
+@keyframes scrollMotion{
+    0% {transform:translateY(10px);}
+    50% {transform:translateY(0);}
+    100% {transform:translateY(10px);}
+}
+
+@keyframes textUp{
+    from {transform:translateY(100px);opacity:0;}
+    to {transform:translateY(0);opacity:1;}
+}
+
+/*두번째 섹션*/
+#fullpage .profile{position:relative;}
+#fullpage .profile .inwrap{width:100%;position:absolute;top:50%;transform:translateY(-50%);padding:0 5%;box-sizing:border-box;}
+#fullpage .profile .keyword{padding:0 0 5%;}
+#fullpage .profile .keyword .tit{font-size:1.7rem;color:#f4df4d;font-weight:600;margin-bottom:10px;}
+#fullpage .profile .keyword .txt{color:#333;}
+#fullpage .profile .tab_tit{margin-bottom:40px}
+#fullpage .profile .tab_tit li{display:inline-block;text-align:center;margin-right:25px;}
+#fullpage .profile .tab_tit li a{display:block;width:120px;height:35px;line-height:38px;font-size:1rem;color:#f4df4d;border:3px solid #f4df4d;border-radius:30px;}
+#fullpage .profile .tab_tit li.on a{background:#f4df4d;color:#000;}
+#fullpage .profile .content{margin-left:20px}
+#fullpage .profile .content p{margin-bottom:20px;}
+#fullpage .profile .license_key,
+#fullpage .profile .skill_key,
+#fullpage .profile .license_con,
+#fullpage .profile .skill_con{display:none;}
+#fullpage .profile .skillWrap{font-size:0;}
+#fullpage .profile .skillWrap li{display:inline-block;width:50%;vertical-align:top;}
+#fullpage .profile .skillWrap li p{display:inline-block;vertical-align:middle;margin-right:3%;}
+#fullpage .profile .skillWrap li .icon{width:8%;vertical-align:middle;}
+#fullpage .profile .skillWrap li .icon img{width:100%;}
+#fullpage .profile .skillWrap li .gauge{height:33px;background:#f1f1f1;}
+#fullpage .profile .skillWrap li .html .gauge{background:#e2703e}
+#fullpage .profile .skillWrap li .css .gauge{background:#57a7d8;}
+#fullpage .profile .skillWrap li .js .gauge{background:#e9c24b;}
+#fullpage .profile .skillWrap li .illust .gauge{background:#f19f39;}
+#fullpage .profile .skillWrap li .photoshop .gauge{background:#56a6f7}
+#fullpage .profile .skillWrap li .percent{font-size:1rem;}
+
+#fullpage .profile .skillWrap li.on .html .gauge,
+#fullpage .profile .skillWrap li.on .css .gauge{animation:gaugeOn1 2s;animation-fill-mode: forwards;}
+#fullpage .profile .skillWrap li.on .js .gauge,
+#fullpage .profile .skillWrap li.on .illust .gauge{animation:gaugeOn2 2s;animation-fill-mode: forwards;}
+#fullpage .profile .skillWrap li.on .photoshop .gauge{animation:gaugeOn3 2s;animation-fill-mode: forwards;}
+
+@keyframes gaugeOn1{
+    from{width:0;}
+    to{width:65%;}
+}
+
+@keyframes gaugeOn2{
+    from{width:0;}
+    to{width:35%;}
+}
+
+@keyframes gaugeOn3{
+    from{width:0;}
+    to{width:45%;}
+}
+
+/*세번째 섹션*/
+#fullpage .works .fp-tableCell{display:flex;}
+#fullpage .works .swiper-container{width:50%}
+#fullpage .works .swiper-container img{width:100%;height:100vh;}
+#fullpage .works .rightText{background:#fcfcfc;position:relative;}
+#fullpage .works .rightText > ul > li{padding:20% 10%;box-sizing:border-box;}
+#fullpage .works .rightText .tit{font-size:1.5rem;font-weight:600;margin-bottom:1.8rem;}
+#fullpage .works .rightText .tit i{font-size:2rem;color:#f4df4d;position:relative;top:6px;margin-right:5px;}
+#fullpage .works .rightText .listWrap{padding-left:25px;}
+#fullpage .works .rightText .listWrap li{color:#555;font-size:1.1rem;margin-bottom:1rem;list-style:disc;line-height:1.8em;}
+#fullpage .works .rightText a{position:absolute;bottom:10%;right:10%;font-size:1.1rem;transition:.5s;}
+#fullpage .works .rightText a i{font-size:1.4rem;margin-left:5px;position:relative;top:4px;transition:.5s;}
+#fullpage .works .rightText a:hover i{color:#f4df4d;margin-left:8px;}
+#fullpage .works .rightText .swiper-button-next,
+#fullpage .works .rightText .swiper-button-prev{width:35px;height:35px;border-radius:100%;background:#f4df4d;font-size:1.5rem;color:#fff;right:20px;left:auto;transition:.5s}
+#fullpage .works .rightText .swiper-button-next{top:50%;margin-top:17.5px;}
+#fullpage .works .rightText .swiper-button-next::after,
+#fullpage .works .rightText .swiper-button-prev::after{display:none}
+
+/*네번째 섹션*/
+#fullpage .contact .inwrap{width:100%;box-sizing:border-box;padding:0 5%;position:absolute;top:50%;transform:translateY(-50%);}
+#fullpage .contact .textWrap p{font-weight:200;font-size:1.5rem;}
+#fullpage .contact .textWrap p strong{font-weight:400;}
+#fullpage .contact .textWrap p .name{font-family:'Cafe24Shiningstar';font-size:2rem;}
+#fullpage .contact .pickme{margin:8% 0 5%;font-size:2.3rem;font-weight:600;text-align:center;}
+#fullpage .contact ul{display:flex;}
+#fullpage .contact ul li{width:33.33%;text-align:center;}
+#fullpage .contact ul li .tit{width:125px;height:38px;line-height:40px;background:#f4df4d;border-radius:30px;text-align:center;font-size:1.1rem;margin:0 auto 30px;}
+#fullpage .contact ul li .list{margin-bottom:10px;}
+#fullpage .contact ul li .list a{font-size:1.125rem;word-break:break-all;}
+#fullpage .contact ul li .list i{vertical-align:middle;margin:0 8px;font-size:1.2rem;}
+#fullpage .contact ul li .list.google i{font-weight:600;}
+
+
+/*태블릿 반응형 CSS*/
+@media (max-width:1024px){
+    /*세번째 섹션*/
+    #fullpage .works{position:relative;}
+    #fullpage .works .fp-tableCell{display:block;}
+    #fullpage .works .swiper-container{width:100%;}
+    #fullpage .works .rightText{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);z-index:1;width:90%;height:90%;background:rgba(255,255,255,.8);}
+}
+
+/*모바일 반응형 CSS*/
+@media (max-width:680px){
+    /*헤더*/
+    .mainHeader{text-align:center;}
+    .mainHeader #menu{margin-right:0;}
+    .mainHeader #menu li a{font-size:.8rem;}
+
+    /*두번째 섹션*/
+    #fullpage .profile .keyword{padding:0 0 15%;}
+    #fullpage .profile .tab_tit{font-size:0}
+    #fullpage .profile .tab_tit li{width:31.33%;margin-right:2%;}
+    #fullpage .profile .tab_tit li a{width:100%;height:40px;font-size:1rem;box-sizing:border-box;margin-right:5px;}
+    #fullpage .profile .skillWrap li{display:block;width:100%;}
+    #fullpage .profile .skillWrap li .html .gauge, 
+    #fullpage .profile .skillWrap li .css .gauge{width:70%;}
+
+    /*세번째 섹션*/
+    #fullpage .works .rightText > ul > li{padding:15% 10%;}
+    #fullpage .works .rightText .swiper-button-next, 
+    #fullpage .works .rightText .swiper-button-prev{right:10px;width:33px;height:33px;}
+    #fullpage .works .rightText .swiper-button-next{margin-top:15.5px;}
+
+    /*네번째 섹션*/
+    #fullpage .contact .inwrap{top:9%;transform:translateY(0);}
+    #fullpage .contact .pickme{font-size:2rem;padding:10% 0 8%;}
+    #fullpage .contact ul li{width:31.33%;margin:0 1%;}
+    #fullpage .contact ul li .tit{width:100%;font-size:1rem;}
+    #fullpage .contact ul li .list i{margin:0 5px;}
+}
+
+/*모바일 반응형 CSS*/
+@media (max-width:360px){
+    /*헤더*/
+    .mainHeader #menu{font-size:0;}
+    .mainHeader #menu li{padding:7px 7px 3px;}
+    .mainHeader #menu li a{font-size:.7rem;}
+
+    /*첫번째 섹션*/
+    #fullpage .intro p{font-size:1.5rem;}
+
+    /*두번째 섹션*/
+    #fullpage .profile .keyword .tit{font-size:1.3rem;}
+    #fullpage .profile .keyword .txt{font-size:.9rem;}
+    #fullpage .profile .tab_tit{margin-bottom:30px;}
+    #fullpage .profile .tab_tit li a{font-size:.85rem;height:35px;line-height:32px;}
+    #fullpage .profile .content p{margin-bottom:15px;font-size:.9rem;}
+    #fullpage .profile .skillWrap li .icon{width:9%;}
+    #fullpage .profile .skillWrap li .gauge{height:27px;}
+    #fullpage .profile .skillWrap li .html .gauge, 
+    #fullpage .profile .skillWrap li .css .gauge{width:67%;}
+    #fullpage .profile .skillWrap li .percent{font-size:.8rem;}
+
+    /*세번째 섹션*/
+    #fullpage .works .rightText .tit{font-size:1.3rem;}
+    #fullpage .works .rightText .tit i{font-size:1.7rem;top:5px}
+    #fullpage .works .rightText .listWrap li{margin-bottom:15px;line-height:1.5em;font-size:.9rem;}
+    #fullpage .works .rightText a{font-size:.9rem;}
+    #fullpage .works .rightText a i{font-size:1.2rem;top:2px;}
+
+    /*네번째 섹션*/
+    #fullpage .contact .textWrap p{font-size:1.2rem;}
+    #fullpage .contact .pickme{font-size:1.7rem;}
+    #fullpage .contact ul li .tit{font-size:.8rem;margin-bottom:20px;}
+    #fullpage .contact ul li .list a{font-size:.9rem;}
+    #fullpage .contact ul li .list i{margin:0 3px;}
+}

@@ -1,0 +1,41 @@
+/*head*/
+header{position:fixed;z-index:10;right:20px;}
+header .open_btn{display:inline-block;font-size:1.4rem;padding:20px 0;width:30px;}
+header .open_btn .btn{display:block;height:1.5px;background:#111;transition:.5s;position:absolute;right:0;}
+header .open_btn .bar1{width:18px;}
+header .open_btn .bar2{width:23px;top:28px;}
+header .open_btn .bar3{width:30px;top:37px;}
+header .open_btn:hover .btn{width:30px;}
+
+/*사이드 메뉴*/
+aside{width:30%;height:100%;position:fixed;z-index:1000;top:0;right:-40%;background:#fff;transition:.7s;box-shadow:-1px 1px 20px #ddd;}
+aside .sideMenu{padding:30px 35px;box-sizing:border-box;}
+aside .sideMenu .close_btn{position:absolute;left:-45px;font-size:1.6rem;font-weight:600;color:#111;}
+aside .sideMenu ul li{margin-bottom:15px;}
+aside .sideMenu ul li a{position:relative;font-size:1.5rem;font-weight:600;transition:.5s;}
+aside .sideMenu ul li a::before{content:"";display:block;position:absolute;top:-10px;left:-5px;width:20px;height:20px;border-radius:100%;background:#f4df4d;z-index:-1;transition:.5s;opacity:0}
+aside .sideMenu ul li a:hover{padding-left:10px;}
+aside .sideMenu ul li a:hover::before{left:0;opacity:1;}
+aside .side_contect{margin:40px 0 30px}
+aside .side_contect .tit{font-weight:600;color:#333;margin-bottom:10px;}
+aside .side_contect .tit i{font-size:1.5rem;vertical-align:middle;margin-left:3px;}
+aside .side_contect .list{font-size:.8rem;color:#555;margin-bottom:5px}
+aside .side_contect .list a{font-size:.85rem;color:#444;margin-left:10px;word-break:break-all;}
+aside .git_icon i{font-size:1.6rem;transition:.5s}
+aside .git_icon a:hover i{color:#f4df4d;}
+
+/*모바일 반응형CSS*/
+@media (max-width:680px){
+    aside{width:80%;right:-100%;}
+}
+
+/*모바일 반응형CSS*/
+@media (max-width:360px){
+    aside .sideMenu{padding:20px 30px;}
+    aside .sideMenu ul li{margin-bottom:10px;}
+    aside .sideMenu ul li a{font-size:1.3rem;}
+    aside .side_contect{margin-top:35px;}
+    aside .side_contect .tit{font-size:.85rem;}
+    aside .side_contect .tit i{font-size:1.2rem;}
+    aside .side_contect .list{font-size:.75rem;}
+}
